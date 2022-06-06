@@ -2,7 +2,9 @@ Recently, I debugged the code for the interesting paper **Geometric compression 
 
 1. the .sh file is for the run script
  
-2. ntk_compare.py file check the calculation of ntk and the author's method runs very fast.
+2. ntk_compare.py file check the calculation of ntk and the author's method runs very fast
  
 3. the show*.py files are for plot
+
+4. the result of ODE*.py is a little weird
 
