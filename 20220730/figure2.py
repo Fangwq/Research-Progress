@@ -46,7 +46,7 @@ def Inf2(lim, x2): #integrate x1 from -lim to lim
 # plt.show()
 
 # data
-lim = 1.0
+lim = 1.5
 X_train1, X_train2 = np.mgrid[-lim:lim:15j, -lim:lim:25j]
 
 
@@ -189,14 +189,15 @@ plt.figure(5)
 X1_grid, X2_grid = np.meshgrid(X1_f1[:,0], np.linspace(-lim, lim, num))
 f12_grid = f12(X1_grid, X2_grid)
 print(np.shape(X1_grid), np.shape(X2_grid), np.shape(f12_grid))
-plt.plot(X1_f1[:, 0], np.sum(f12_grid, axis=0)/num, 'k-o', label='predicted')
+plt.plot(X1_f1[:, 0], 2*lim*np.sum(f12_grid, axis=0)/num, 'k-o', label='predicted')
 plt.plot(X1_f1[:, 0], Inf1(X1_f1[:, 0]), 'r-o', label='test')
 plt.legend(loc='best')
+plt.ylim([-1,1])
 plt.figure(6)
 X1_grid, X2_grid = np.meshgrid(np.linspace(-lim, lim, num), X2_f2[:,0])
 f12_grid = f12(X1_grid, X2_grid)
 print(np.shape(X1_grid), np.shape(X2_grid), np.shape(f12_grid))
-plt.plot(X2_f2[:, 0], np.sum(f12_grid, axis=1)/num, 'k-o', label='predicted')
+plt.plot(X2_f2[:, 0], 2*lim*np.sum(f12_grid, axis=1)/num, 'k-o', label='predicted')
 plt.plot(X2_f2[:, 0], Inf2(lim, X2_f2[:, 0]), 'r-o', label='test')
 plt.legend(loc='best')
 plt.show()
