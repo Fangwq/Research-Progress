@@ -1,4 +1,4 @@
-# The codes are based on the github directory *UCL-Msc-Project-main*. And 
+The codes are based on the github directory *UCL-Msc-Project-main*. And 
 I add few codes to reproduct the results in the Mark van der Wilk's paper.
 The code is both useful for the following two papers:
 
