@@ -7,7 +7,9 @@ from geometric_kernels.spaces import Circle
 from geometric_kernels.kernels import MaternKarhunenLoeveKernel
 import matplotlib.pyplot as plt
 
-# plot matern kernel on circle. And this method should be generalized to Lie group method
+# plot matern kernel on circle. And this method should be generalized to Lie group method.
+# And it should refer to the paper <<Stationary Kernels and Gaussian Processes
+# on Lie Groups and their Homogeneous Spaces>>.
 num = 100
 circ = Circle()
 prod_space = ProductDiscreteSpectrumSpace(Circle(), Circle(), num_eigen=num)
