@@ -11,17 +11,15 @@ import matplotlib.pyplot as plt
 # And it should refer to the paper <<Stationary Kernels and Gaussian Processes
 # on Lie Groups and their Homogeneous Spaces>>.
 num = 100
-circ = Circle()
 prod_space = ProductDiscreteSpectrumSpace(Circle(), Circle(), num_eigen=num)
 # %%
-X = B.linspace(0, 2*3.14159, num).reshape(-1,1)
-Y = np.sin(X)
-grid = np.meshgrid(X, Y)
+theta = B.linspace(0, 2*3.14159, num).reshape(-1,1)
+grid = np.meshgrid(theta, theta)
 mesh = B.stack(*grid, axis=-1).reshape((-1, 2))
 print(mesh.shape)
 # map it to circle
-X = np.cos(X)
-Y = np.sin(Y)
+Y = np.sin(theta)
+X = np.cos(theta)
 Z = np.zeros_like(Y)
 
 eigs = prod_space.get_eigenfunctions(num)
