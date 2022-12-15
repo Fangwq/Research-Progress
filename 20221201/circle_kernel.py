@@ -14,7 +14,8 @@ num = 100
 prod_space = ProductDiscreteSpectrumSpace(Circle(), Circle(), num_eigen=num)
 # %%
 theta = B.linspace(0, 2*3.14159, num).reshape(-1,1)
-grid = np.meshgrid(theta, theta)
+R = np.linspace(0, 1, num).reshape(-1, 1)
+grid = np.meshgrid(theta, R)
 mesh = B.stack(*grid, axis=-1).reshape((-1, 2))
 print(mesh.shape)
 # map it to circle
